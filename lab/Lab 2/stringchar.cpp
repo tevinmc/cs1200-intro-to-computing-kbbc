@@ -24,19 +24,22 @@ int main()
 	
 	//  Fill in the code to do the following:
 	//  Assign the value of "crackers" to favoriteSnack
+		favoriteSnack = "crackers";
 	//  Assign a grade of 'B' to rating
+		rating = 'B';
 	//  Assign the number 250 to the numberOfPeople
+		numberOfPeople = 250;
 	//  Assign the number 148 to the topChoiceTotal
+		topChoiceTotal = 148;
 
 	// Fill in the blanks of the following:
-	cout << "The preferred soda is " <<____________<< endl;
-	cout << "The preferred snack is " <<___________<< endl;
-	cout << "Out of " <<_____________ << " people " 
-		 <<____________	 << " chose these items!" << endl;
-	cout << "Each of these products were given a rating of " <<__________;
+	cout << "The preferred soda is " << FAVORITESODA << endl;
+	cout << "The preferred snack is " << favoriteSnack << endl;
+	cout << "Out of " << numberOfPeople << " people " 
+		 << topChoiceTotal << " chose these items!" << endl;
+	cout << "Each of these products were given a rating of " << BESTRATING;
 	cout << " from our expert tasters" << endl;
-	cout << "The other products were rated no higher than a " << rating 
-		 << endl;
+	cout << "The other products were rated no higher than a " << rating << endl;
 
 	return 0;
 
