@@ -1,7 +1,11 @@
-// Hello World
-// Tevin McQuilkin
-// 09/14/2020
-// This program converts a string into an standard output stream object that can be read in the terminal. 
+ /* 
+    Name: Hello World
+    Copyright: 2020
+    Author: Tevin McQuilkin
+    Date: Sat Sep 19 2020
+    Description: This program turn a string into string buffer thats streamed into the iostream 
+                  cout object displays the buffered string data(chars) over standard output.
+ */
 
 #include <iostream>      
 using namespace std;
