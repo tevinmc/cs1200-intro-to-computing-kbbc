@@ -9,6 +9,8 @@
                 "-g",
                 "${file}",
                 "-pedantic",
+                "-Werror",
+                "-Wall",
                 "-std=c++98",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
