@@ -1,6 +1,4 @@
-
 //  This program demonstrates the use of characters and strings
-
 
 //  PLACE YOUR NAME HERE
 
@@ -20,7 +18,7 @@ int main()
 	char rating;							// 2nd highest product rating 
 	string favoriteSnack;					// most preferred snack
 	int numberOfPeople;						// the number of people in the survey
-    int topChoiceTotal;						// the number of people who prefer the top choice
+  int topChoiceTotal;						// the number of people who prefer the top choice
 	
 	//  Fill in the code to do the following:
 	//  Assign the value of "crackers" to favoriteSnack
