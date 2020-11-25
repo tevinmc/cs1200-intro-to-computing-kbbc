@@ -4,3 +4,6 @@
 
 !.json
 !.js
+
+/test
+/test/number_of_widgets.cpp

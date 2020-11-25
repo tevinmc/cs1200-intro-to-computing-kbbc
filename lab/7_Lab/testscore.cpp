@@ -2,7 +2,7 @@
 // from the keyboard and then calculates and outputs  the average score
 // as well as the highest and lowest score. There will be a maximum of 100 scores.
 
-// PLACE YOUR NAME HERE
+// Tevin McQuilkin
 
 #include <iostream>
 using namespace std;
@@ -10,7 +10,7 @@ using namespace std;
 typedef int GradeType[100];  // declares a new data type: 
                              // an integer array of 100 elements
 
-
+// prototype functions
 float findAverage (const GradeType, int);  // finds average of all grades
 int   findHighest (const GradeType, int);  // finds highest of all grades
 int   findLowest  (const GradeType, int);  // finds lowest of all grades
@@ -18,9 +18,9 @@ int   findLowest  (const GradeType, int);  // finds lowest of all grades
 int main()
 
 {
-    GradeType  grades;					   // the array holding the grades.
-    int  numberOfGrades;				   // the number of grades read.
-    int pos;							   // index to the array.
+  GradeType  grades;					   // the array holding the grades.
+  int  numberOfGrades;				   // the number of grades read.
+  int pos;							   // index to the array.
 
 	float avgOfGrades;					   // contains the average of the grades.
 	int highestGrade;					   // contains the highest grade.
@@ -33,13 +33,13 @@ int main()
 	cin  >> grades[pos];
 
 	while (grades[pos] != -99)
-	{
-
-        // Fill in the code to read the grades
-
+	{ 
+    pos++;
+    cin >> grades[pos];
+    
 	}
 
-	numberOfGrades = _________;  // Fill blank with appropriate identifier
+	numberOfGrades = pos;  // Fill blank with appropriate identifier
 
 	// call to the function to find average
 	
@@ -50,12 +50,15 @@ int main()
 
 	//  Fill in the call to the function that calculates highest grade
 
+  highestGrade = findHighest(grades,numberOfGrades);
 
 	cout << endl << "The highest grade is " << highestGrade << endl;
 
 
 	// Fill in the call to the function that calculates lowest grade
     // Fill in code to write the lowest to the screen
+    lowestGrade = findLowest(grades,numberOfGrades);
+  cout << endl << "The lowest grade is " << lowestGrade << endl;
 
 	return 0;
 }
@@ -76,13 +79,13 @@ float findAverage (const GradeType  array, int size)
 	
 	float sum = 0;   // holds the sum of all the numbers
 	
-    for (int pos = 0; pos < size; pos++)
+  for (int pos = 0; pos < size; pos++){
+    sum = sum + array[pos];
+  }
 
-		
-	   sum = sum + array[pos];
+  
 
-    return (sum / size);  //returns the average
-          
+  return (sum / size);  //returns the average       
 }
 
 //****************************************************************************
@@ -96,12 +99,12 @@ float findAverage (const GradeType  array, int size)
 //
 //****************************************************************************
 
-int   findHighest (const GradeType array, int size)
-
-{
-
-   // Fill in the code for this function
-
+int   findHighest (const GradeType array, int size){
+  int highest = 0;
+  for (int pos = 0; pos < size; pos++){
+    if(highest < array[pos]) highest = array[pos];
+  }
+  return highest;
 }
 
 
@@ -116,9 +119,10 @@ int   findHighest (const GradeType array, int size)
 //
 //****************************************************************************
 
-int   findLowest  (const GradeType array, int size)
-
-{
-   // Fill in the code for this function
-
+int   findLowest  (const GradeType array, int size){
+  int lowest = -1;
+  for (int pos = 0; pos < size; pos++){
+    if(lowest < array[pos]) lowest = array[pos];
+  }
+  return lowest;
 }
